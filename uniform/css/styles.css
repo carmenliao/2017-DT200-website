@@ -1,0 +1,525 @@
+header,
+nav,
+article,
+footer {
+	display: block;
+}
+
+body {
+	font-family: "Arial", "Lucida Grande", "sans-serif";
+	font-size: 18px;
+	background-color: white;
+}
+
+header {
+	padding: 10px 20px;
+	background-color: #ffffff;
+	text-align: center;
+	font-family: "Arial", "Lucida Grande", sans-serif;
+}
+
+header h1{
+	font-family: "Century Gothic";
+	font-weight: bold;
+	font-size: 3em;
+	color: black;
+	margin-bottom: 20px;
+}
+
+header h2{
+	font-family: century gothic;
+	font-weight: 400;
+	font-size: 1.1em;
+	color: black;
+	margin-bottom: 0;
+}
+
+nav { /*This makes sure nav wraps around the floated list*/
+	padding: 10px 10px 10px 55px;
+	overflow: hidden;
+}
+
+nav ul li {
+	display: inline-block;
+    text-align: center;
+	margin: 0 4em 0 0;
+	font-family: "century gothic";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+article {
+	background-color: #ffffff;
+	border-color: #000000;
+	border-width: 5px;
+	overflow: hidden;
+	padding: 5px;
+}
+
+article h1 {
+	font-family: "Century Gothic", "Lucida Grande", sans-serif;
+	font-weight: normal;
+	font-size: 1.8em;
+	color: black;
+	margin: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+article p {
+	font-family: "Century Gothic", "Lucida Grande", sans-serif;
+	font-size: 1em;
+	padding: 8px 10px;
+}
+
+p.center {
+    margin-top: 30px;
+}
+
+p.pretty {
+	font-family: "Century Gothic", "Lucida Grande", sans-serif;
+	padding: 8px 10px;
+	text-align: center;
+	font-size: 1.1em;
+	padding-bottom: 40px;
+}
+
+
+article li {
+	font-size: 1em;
+	font-family: Century Gothic;
+    font-weight: bold;
+    padding-left: 8px;
+
+}
+
+figcaption{
+	display: grid; /*** Makes all captions align underneath images ***/
+}
+
+/* nav.main {
+	width: auto;
+    text-align: center;
+    margin: 0;
+    background-color: white;
+    border-bottom: 1px #cccccc solid;
+	padding-bottom:0px;
+} */
+
+/*** Transitions *****************************************************************************/
+
+
+nav ul li a.border:after { /*** the red bottom border transition for nav ***/
+	display: block;
+	content: '';
+	border-bottom: solid 2.5px #e60000;
+	padding-bottom: 10px;
+	transform: scaleX(0);
+	transition: transform 330ms ease-in-out;
+}
+
+nav ul li a.border:hover:after { /*** the red bottom border transition for nav ***/
+	transform: scaleX(1);
+}
+
+nav ul li a.border:link,
+nav ul li a.border:visited,
+nav ul li a.border:hover { /*** styles the nav ***/
+	color: black;
+	text-decoration: none;
+}
+
+article a.link_right:link, /*** the colour transition for "winter uniform" link in article ***/
+article a.link_right:visited{
+	color: black;
+	text-decoration: none;
+	transition: color .2s ease-out, background .5s ease-in;
+}
+
+article a.link_right:hover { /*** the colour transition for "winter uniform" link in article ***/
+	text-decoration: none;
+	background-color: #4d4d4d;
+	color: white;
+}
+
+a.link_back:hover { /*** the colour transition for "back" link in footer of the teacher search page ***/
+	text-decoration: none;
+	background-color: #4d4d4d;
+	color: white;
+}
+
+article a.link_left:link,
+article a.link_left:visited{ /*** the colour transition for "summer uniform" link in article ***/
+	color: black;
+	text-decoration: none;
+	transition: color .2s ease-out, background .5s ease-in;
+}
+
+article a.link_left:hover { /*** the colour transition for "summer uniform" link in article ***/
+	text-decoration: none;
+	background-color: #ff847a;
+	color: white;
+	border-color: #f9dbd9;
+}
+
+
+/*************************************************************************************************************************/
+
+article a.link_right_db:link, /*** styles the link on "database" page (WEGC Teachers with reg numbers) ***/
+article a.link_right_db:visited{
+	color: black;
+	text-decoration: none;
+	transition: color .2s ease-out, background .5s ease-in;
+}
+
+article a.link_right_db:hover { /*** the colour transition for link on "database" page (WEGC Teachers with reg numbers) ***/
+	text-decoration: none;
+	background-color: #f79b9b;
+	color: white;
+}
+
+article a.link_left_db:link,
+article a.link_left_db:visited{ /*** styles link on "database" page (WEGC Teachers with full details) ***/
+	color: black;
+	text-decoration: none;
+	transition: color .2s ease-out, background .5s ease-in;
+}
+
+article a.link_left_db:hover { /*** the colour transition for link on "database" page (WEGC Teachers with full details) ***/
+	text-decoration: none;
+	background-color: #f79b9b;
+	color: white;
+	border-color: black;
+}
+
+/**************************************************************************************************************/
+
+img.right {
+	float: right;
+	padding: 10px;
+}
+
+img.left {
+	padding: 0px 10px 10px 10px;
+}
+
+img.center {
+	padding: 0px 10px 15px 105px;
+}
+
+/***************************************************************************************************************/
+
+article a.link_right { /*** styles the link to "summer uniform" underneath image ***/
+	font-family: century gothic;
+	font-size: 0.85em;
+	text-transform: uppercase;
+	border: 1px solid black;
+    padding: 10px 15px 10px 15px;
+    margin: 10px 0px 10px 178px;
+	text-decoration: none;
+}
+
+a.link_right_db { /*** styles the link on "database" page (WEGC Teachers with reg numbers) ***/
+	font-family: century gothic;
+	font-size: 0.85em;
+	text-transform: uppercase;
+	border: 1px solid black;
+    padding: 10px 15px 10px 15px;
+    margin: 10px 0px 10px 80px;
+	text-decoration: none;
+	color:black;
+}
+
+article a.link_left {  /*** styles the link to "winter uniform" underneath image ***/
+	font-family: century gothic;
+	font-size: 0.85em;
+	text-transform: uppercase;
+	border: 1px solid black;
+    padding: 10px 15px 10px 15px;
+    margin: 10px 0px 10px 178px;
+	text-decoration: none;
+	color: black;
+}
+
+a.link_left_db{  /*** styles the link on "database" page (WEGC Teachers with full details) ***/
+	font-family: century gothic;
+	font-size: 0.85em;
+	text-transform: uppercase;
+	border: 1px solid black;
+    padding: 10px 15px 10px 15px;
+    margin: 10px 0px 10px 300px;
+	text-decoration: none;
+	color:black;
+}
+
+a.link_back{  /*** styles the "back" link in footer of the teacher search page***/
+	font-family: century gothic;
+	font-size: 1em;
+	text-transform: uppercase;
+	border: 1px solid black;
+    padding: 10px 15px 10px 15px;
+	margin:auto;
+	text-decoration: none;
+	color:black;
+}
+
+/**************************************************************************************************************/
+
+
+article h2.school_pride { /*** styles the subheader for one of the photos on home***/
+	padding-top: 10px;
+	margin: inherit;
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	width: auto;
+	font-size: 1em;
+    font-family: century gothic;
+}
+
+article p.descrip_school_pride{ /*** styles the description for one of the photos on home***/
+	padding-top: 10px;
+	text-align: center;
+	margin: inherit;
+	text-align: center;
+	text-transform: none;
+	padding-top: 1px;
+	font-family: century gothic;
+	font-size: 0.8em;
+}
+
+article h3.school_spirit { /*** styles the subheader for one of the photos on home***/
+	font-family: century gothic;
+	font-size: 1em;
+    margin: inherit;
+	text-align: center;
+	font-weight:bold;
+	letter-spacing: 0.5px;
+	padding-top: 10px;
+}
+
+article p.descrip_school_spirit { /*** styles the description for one of the photos on home***/
+	width: 510px;
+	font-family: century gothic;
+	font-size: 0.8em;
+    margin: inherit;
+	text-align: center;
+	text-transform: none;
+	padding-top: 1px;
+}
+
+article h2.uniform_subheadings { /*** styles the subheader for each of the uniform pages ***/
+	font-family: century gothic;
+	font-size: 1em;
+	text-align: center;
+	font-weight:bold;
+	letter-spacing: 0.5px;
+	padding-top: 6px;
+}
+
+article p.right_disappear { /*** makes the images get 'lifted up'. the paragraph says, "there is nothing here" ***/
+	font-family: century gothic;
+	font-size: 1em;
+    margin: inherit;
+	text-align: center;
+	font-weight:bold;
+	letter-spacing: 0.5px;
+	color: white;
+}
+
+article p.no_border { /*** styles text without putting a border on top ***/
+	font-family: "Century Gothic", "Lucida Grande", sans-serif;
+	font-size: 1em;
+	padding: 10px 150px 10px 150px;
+	margin-top: 0px;
+	text-align: center;
+}
+
+figcaption.left { /*** aligns imgaes evenly next to each other, starting from the left ***/
+	padding: 10px;
+	text-align: center;
+	font-size: 0.9em;
+	width: auto;
+	font-family: century gothic;
+}
+
+figcaption.caption_smaller { /*** makes the caption for images smaller, in order to fit other images evenly next to each other ***/
+	padding: 10px;
+	text-align: center;
+	font-size: 0.9em;
+	width: 200px;
+	font-family: century gothic;
+}
+
+div.figures{
+	float: left;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+div.figures_vert_left{ /*** a div for an image and caption(s) together ***/
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+div.table {
+	text-align: center;
+}
+
+#pretty { /*** styles the error messages ***/
+    font-size: 1.25em;
+    font-family: century gothic;
+    text-align: center;
+	color: darkred;
+}
+
+p.center {
+	text-align: center;
+	font-family: "Century Gothic", "Lucida Grande", sans-serif;
+	font-size: 1em;
+	padding: 8px 10px;
+}
+
+table{
+    border-collapse: collapse;
+	font-family: century gothic;
+}
+
+table.center {
+	margin: auto; /*** centers the table on the teacher search page and list of teachers with reg num page***/
+}
+
+
+tr.row-heading{
+	border-bottom: 1px solid black;
+}
+
+tr{ /*** table row styles ***/
+	border-bottom: 1px solid #e6e6e6;
+}
+
+td{
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+th{
+	text-align: center;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+form.pretty{ /*** styles the "Teacher's code" part on the database page ***/
+	font-family:century gothic;
+	text-align:center;
+}
+
+input.pretty { /*** styles the "Teacher's code" submit button ***/
+	font-family: century gothic;
+}
+
+#bold {
+	font-weight: bold;
+	font-size: 1.1em;
+	text-align: center;
+	margin-top: 0px;
+}
+
+
+div#container {
+	width: 1300px;
+	margin: auto;
+	overflow: auto;
+}
+
+div#nav {
+    width: auto;
+    margin: 0;
+	border-bottom: 1px #e6e6e6;
+}
+
+div#intro { /*** div for article h1 for home page ***/
+	background-image: url("../images/blue_web.jpg");
+	text-align:center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+div#summer { /*** div for article h1 for summer uniform page ***/
+	background-image: url("../images/orange_web.jpg");
+	text-align:center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+div#winter { /*** div for article h1 for winter uniform page ***/
+	background-image: url("../images/grey_web.jpg");
+	text-align:center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+div#database {  /*** div for article h1 for database page ***/
+	background-image: url("../images/peach_web.jpg");
+	text-align:center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+div#figure { /*** div for aligning images evenly ***/
+	padding: 10px;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 1px #cccccc solid;
+}
+
+div#small { /*** div for subheadings on the home page ***/
+	height: 45px;
+}
+
+div#small_1{  /*** div for subheadings on the uniform pages ***/
+	height: 45px;
+	padding-top: 30px;
+}
+
+div#smallest { /*** div for the link below bottom images on the home page ***/
+	display: inline-block;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+
+a.big { /*** styles the backtotop ***/
+	font-family: century gothic, sans-serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+footer{
+	padding: 10px;
+	overflow: hidden;
+	text-align: center;
+	background-color: lightgray;
+	font-size: 75%;
+	font-family: century gothic;
+}
+
+a.big:link,
+a.big:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a.big:hover{
+	color: #ed3a2a;
+}
+
+/***********************************************************/
